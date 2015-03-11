@@ -1,6 +1,6 @@
 <?php
 	error_reporting(0);
-    $link = mysqli_connect("localhost", "root", "", "ihome");
+    $link = mysqli_connect("localhost", "root", "", "erent");
     // Check connection
 
     if($link === false){
@@ -168,7 +168,7 @@ if(isset($_POST['simpan']))
                                             <?php
 											error_reporting(0);
 mysql_connect("localhost","root","");
-mysql_select_db("ihome");
+mysql_select_db("erent");
 
 //query
 $sql=mysql_query("SELECT id,nama FROM negeri");
