@@ -1,0 +1,62 @@
+1)tukar nama database ihome kpd erent
+
+2)Admin 
+-dekat pengurusan pengguna,del status
+-pendaftaran admin baru tu pun del
+-menu laporan tu delete
+-pengurusan maklum balas del
+-buat satu noti anta kat sistem pada pemilik,cthnya( tempoh iklan da nak abis,kalau nk 
+smbung iklan,sila jelaskan bayaran iklan sbyak RM50) rm10 /sebulan.
+
+
+3)Pemilik
+-dekat profil kemaskini tu bila tekan simpan atau batal.kena pergi dekat 
+menu profil saya. kat menu profil saya buat susunan detail profil yg lps dikemaskini.
+-dekat pendaftaran rumah untuk sewa tu, buat satu button "Batal" utk g link kpd profil
+saya.
+-kalau pemilik nk tambah rumah sewa baru dekat pendaftaran rumah utk sewa tu, xyah la 
+kena isi nama
+-buat popup selepas tekan daftar utk bgtau persetujuan sama ada stju atau x nk iklan
+dlm popup tu.
+- -pengurusan maklum balas buat dekat penyewa dan pemilik je. Tukar pengurusan/maklum
+balas kepada "Aduan kerosakan".Aduan ni hanya pemilik dan penyewa je boleh interaksi 
+dalam sistem ni.email tu del jugak.
+
+
+4) Penyewa
+-pengurusan maklum balas buat dekat penyewa dan pemilik je. Tukar pengurusan/maklum
+balas kepada "Aduan kerosakan".Aduan ni hanya pemilik dan penyewa je boleh interaksi 
+dalam sistem ni.email tu del jugak.
+-selepas carian,kuar jugak dropdown lokasi yg macam main page.
+-buat kemaskini profil yg sama dgn kemaskini profil pemilik.
+-dekat profil saya, kuar detail psal profil penyewa.
+
+
+5) Main page
+-dekat carian sewa..buat drop down menu nama kawasan yg ada disekitar dungun
+cth nama kawasan:
+-sama juga dekat carian dalam pemilik atau penyewa
+-taman cina
+-taman cenderawasih
+-taman permint
+-taman desa permai
+-taman batu tujuh
+
+-buat satu popup selepas taip lokasi kat carian sewa ("sila daftar di main page utk 
+sewa rumah ") 
+-lepastu bila dekat daftar,bila dah complete buat pendafataran then tekan 
+"daftar",link kan kpd page login terus.
+-tambah satu menu kat menu bar selepas carian sewa, "peraturan dan syarat" -nk iklan
+rumah sewa dan nak booking sewa(kat sni akan bgtau detail)
+-dlm menu tu..bgtau la syarat nak iklan tu kne byr,pastu tempoh berapa lama boleh iklan.
+
+
+pengurusan maklum balas buat dekat penyewa dan pemilik je. Tukar pengurusan/maklum
+balas kepada "Aduan kerosakan".Aduan ni hanya pemilik dan penyewa je boleh interaksi 
+dalam sistem ni.email tu del jugak.
+
+cuba cek dekat logout stiap user sbb kdg2 lps tekan logout,xg kat main page.
+
+
+LAst, kami buntu pasal cara nk booking rumah tu macam mana.Kalau ada idea,buat je la setakat
+yang boleh.Nanti hantar la kalau siap. TQ =)
