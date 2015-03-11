@@ -35,7 +35,7 @@ if(isset($_POST['simpan']))
 
     if(mysqli_query($link, $sql)){
      
-		echo "<script language=javascript>alert('Data berjaya disimpan.');window.location='index.php';</script>";
+		echo "<script language=javascript>alert('Data berjaya disimpan.');window.location='login.php';</script>";
 
     } else{
 

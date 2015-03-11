@@ -105,7 +105,7 @@ if(($_GET['action']=="delete") && ($_GET['id']!=NULL))
 						<th>Nama</th>
 						<th>E-mail</th>
 						<th>Peranan</th>
-						<th>Status</th>
+						<!-- <th>Status</th> -->
 						<th>Tindakan</th>
 					</tr>
 				</thead>
@@ -115,7 +115,7 @@ if(($_GET['action']=="delete") && ($_GET['id']!=NULL))
                                   <td> <?php echo ucwords($rows_pelajar['nama']);?></td>
                                   <td class="numeric"><?php echo ucwords($rows_pelajar['email']);?></td>
                                   <td class="numeric"><?php echo ucwords($rows_pelajar['role']);?></td>
-                                  <td class="numeric"><?php echo ucwords($rows_pelajar['status']);?></td>
+                                  <!-- <td class="numeric"><?php echo ucwords($rows_pelajar['status']);?></td> -->
                                   
                            <td class="numeric"><!--<a href="edit.php?id=<?php echo $rows_pelajar['user_id'];?>">
                                            <span class="badge bg-primary">Kemaskini</span></a>-->

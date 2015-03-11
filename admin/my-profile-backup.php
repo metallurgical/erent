@@ -14,6 +14,12 @@ if($_GET['action']=="logout")
 	echo "<script language=javascript>alert('Log keluar berjaya.');window.location='../login.php';</script>";
 }
 
+$sql_pentadbir = "SELECT * FROM user WHERE user_id = '".$_SESSION['user_id']."'";
+if($result_pentadbir = $connect->query($sql_pentadbir))
+{
+	$rows_pentadbir = $result_pentadbir->fetch_array();
+	$total_pentadbir = $result_pentadbir->num_rows;
+} 
 
 $sql_pelajar = "SELECT * FROM user WHERE user_id = ".$_GET['id']."";
 if($result_pelajar = $connect->query($sql_pelajar))
@@ -29,7 +35,33 @@ else
 	echo "<script language=javascript>alert('Maklumat pelajar tidak wujud.');window.location='student-list.php';</script>";
 } 
 
-
+if(isset($_POST['simpan']))
+{
+	$sql_edit_pelajar = "SELECT * FROM user WHERE user_id != '".$_GET['id']."' AND username = '".$username."'";
+	if($result_edit_pelajar = $connect->query($sql_edit_pelajar))
+	{
+		if($total_edit_pelajar = $result_edit_pelajar->num_rows)
+		{
+			echo "<script language=javascript>alert('ID pengguna telah wujud. Sila cuba lagi.');window.location='my-profile.php?id=".$_GET['id']."';</script>";
+		}
+		else
+		{
+			
+			{
+				
+				$sql_edit_pelajar = "UPDATE user SET nama = '".$name_edit."', email = '".$email_edit."', no_tel = '".$no_tel_edit1."', alamat = '".$alamat_edit1."', daerah = '".$daerah_edit1."', poskod = '".$poskod_edit1."', negeri = '".$negeri_edit."', username = '".$username_edit."', password = '".$password_edit."' WHERE user_id = '".$_GET['id']."'";
+				if($result_edit_pelajar = $connect->query($sql_edit_pelajar))
+				{
+					echo "<script language=javascript>alert('Maklumat pelajar berjaya dikemaskini.');window.location='my-profile.php?id=".$_GET['id']."';</script>";
+				}
+				else
+				{
+					echo "<script language=javascript>alert('Maklumat pelajar tidak berjaya dikemaskini. Sila cuba lagi.');window.location='my-profile.php?id=".$_GET['id']."';</script>";
+				}
+			}
+		}
+	}
+}
 ?>
 
 <!DOCTYPE html>
@@ -83,69 +115,83 @@ else
 					<div class="control-group">
 						<label class="control-label" for="name">Nama</label>
 						<div class="controls">
-							<?php echo ucwords($rows_pelajar['nama']);?>
+							<input type="text" name="name_edit" class="input-xlarge" id="name" value="<?php echo ucwords($rows_pelajar['nama']);?>" />
 						</div>
 					</div>
 					<div class="control-group">
 						<label class="control-label" for="email">E-mail</label>
 						<div class="controls">
-							<?php echo ucwords($rows_pelajar['email']);?>
+							<input type="text" name="email_edit" class="input-xlarge" id="email" value="<?php echo ucwords($rows_pelajar['email']);?>" />
 						</div>
 					</div>
 					<div class="control-group">
 						<label class="control-label" for="pnohe">No Telefon</label>
 						<div class="controls">
-							<?php echo ucwords($rows_pelajar['no_tel']);?>
+							<input type="text" name="no_tel_edit1" class="input-xlarge" id="phone" value="<?php echo ucwords($rows_pelajar['no_tel']);?>" />
 						</div>
 					</div>
                     <div class="control-group">
 						<label class="control-label" for="description">Alamat</label>
 						<div class="controls">
-							<?php echo ucwords($rows_pelajar['alamat']);?>
+							<textarea class="input-xlarge" name="alamat_edit1" id="description" rows="3"><?php echo ucwords($rows_pelajar['alamat']);?></textarea>
 						</div>
 					</div>
 					<div class="control-group">
 						<label class="control-label" for="city">Daerah</label>
 						<div class="controls">
-							<?php echo ucwords($rows_pelajar['daerah']);?>
+							<input type="text" name="daerah_edit1" class="input-xlarge" id="city" value="<?php echo ucwords($rows_pelajar['daerah']);?>"/>
 						</div>
 					</div>
                     <div class="control-group">
 						<label class="control-label" for="city">Poskod</label>
 						<div class="controls">
-							<?php echo ucwords($rows_pelajar['poskod']);?>
+							<input type="text" name="poskod_edit1" class="input-xlarge" id="city" value="<?php echo ucwords($rows_pelajar['poskod']);?>"/>
 						</div>
 					</div>	
                     	
-                    <div class="control-group">
-                        <label class="control-label" for="city">Negeri</label>
-                         <div class="controls">
-                     <?php echo ucwords($rows_pelajar['negeri']);?>
-                     	</div>
+                    <div class="form-group">
+                                            <label class="control-label">Negeri</label>
+                                            <div class="controls">
+                                           <input type="text" name="negeri_edit" class="input-xlarge" id="city" value="<?php echo ucwords($rows_pelajar['negeri']);?>"/></div>
                                            
-                    </div>
-                    <div class="control-group">
+                                        </div><br>
+                                          <div class="control-group">
 						<label class="control-label" for="city">Nama Pengguna</label>
 						<div class="controls">
-							<?php echo ucwords($rows_pelajar['username']);?>
+							<input type="text" name="username_edit" class="input-xlarge" id="city" value="<?php echo ucwords($rows_pelajar['username']);?>"/>
 						</div>
 					</div>	
                       <div class="control-group">
 						<label class="control-label" for="city">Kata Laluan</label>
 						<div class="controls">
-							<?php echo ucwords($rows_pelajar['password']);?>
+							<input type="text" name="password_edit" class="input-xlarge" id="city" value="<?php echo ucwords($rows_pelajar['password']);?>"/>
 						</div>
 					</div>	
                       <div class="control-group">
 						<label class="control-label" for="city">Tarikh Daftar</label>
 						<div class="controls">
-							<?php echo ucwords($rows_pelajar['date_register']);?>
+							<input type="text" name="reg_edit" class="input-xlarge" id="city" value="<?php echo ucwords($rows_pelajar['date_register']);?>" readonly/>
 						</div>
 					</div>
-			
+			<!--		<div class="control-group">
+						<label class="control-label" for="role">Role</label>
+						<div class="controls">
+							<select id="role">
+								<option value="admin">Admin</option>
+								<option value="mod">Moderator</option>
+								
+							</select>
+						</div>
+					</div>	
+					<div class="control-group">
+						<label class="control-label" for="active">Active?</label>
+						<div class="controls">
+							<input type="checkbox" id="active" value="1" />
+						</div>
+					</div> -->
 					<div class="form-actions">
-                    <button type="button" name="simpan" class="btn btn-success btn-large" onclick="window.location.href='my-profile-kemaskini.php?id=<?php echo $_GET['id'];?>'">Kemaskini</button>
-						 
+                    <button type="submit" name="simpan" class="btn btn-success btn-large">Simpan</button>
+						 <a class="btn" href="">Batal</a>
 					</div>					
 				</fieldset>
 			</form>

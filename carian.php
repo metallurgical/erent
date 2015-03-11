@@ -1,18 +1,18 @@
 <?php
-$mysqli_db = new mysqli('localhost', 'root', '', 'ihome');
+$mysqli_db = new mysqli('localhost', 'root', '', 'erent');
 
 $result_tb = "";
-if(!empty($_POST['search']) && !empty($_POST['search_value'])) {
-
+if(isset($_POST['search']) && !empty($_POST['search_value'])) {
+	echo "<script language=javascript>alert('Sebarang penempahan rumah, anda boleh menghubungi pemilik menggunakan nombor yang tertera di senarai rumah.');</script>";
    $e = $_POST['search_value'];
+   $kawasan_id = $_POST['kawasan_id'];
 
-  $query = 'SELECT * FROM home WHERE status=1 and ' ."location LIKE '%$e%'";
-   $query_result = $mysqli_db->query($query);
-   //$result_tb = '<table cellspacing="5" cellpadding="5" class="table table-striped table-bordered table-condensed">';
+  $query = 'SELECT * FROM home WHERE status=1 and ' ."tajuk LIKE '%$e%' and kawasan_id = '$kawasan_id'";
+  $query_result = $mysqli_db->query($query);
    
-   //$result_tb .='</table>';
 
-   $mysqli_db->close();
+
+   
 }
 ?>
 <!DOCTYPE html>
@@ -125,23 +125,7 @@ if(!empty($_POST['search']) && !empty($_POST['search_value'])) {
 		<!-- logo end -->
 		<!-- main menu -->
 			<ul id="mainmenu">
-		    <li class="home_icon"><span class="circle_effect"></span><a href="index.php">Home</a></li>
-		    <li>
-		    	<a href="index.php" >Laman Utama</a>
-		    	<ul>
-		    		
-	    	  </ul>
-		    </li>
-		    <li>
-		    	<a href="carian.php" alt="Carian untuk sewa" class="active">Carian Sewa</a>
-		    	
-		    <!-- </li>
-               <li>
-		    	<a href="contact.php">Hubungi</a>
-		    	
-		    </li>
-		    
-		    <li class="contact_icon"><span class="circle_effect"></span><a href="contact.php">Contact</a></li> -->
+		    <?php include('main_menu.php');?>
 		</ul>
 		<!-- main menu end -->
 		<!-- search bar -->
@@ -165,14 +149,34 @@ if(!empty($_POST['search']) && !empty($_POST['search_value'])) {
 			<p>
             
             <form class="form-wrapper" method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>">
-            <input type="text" id="search" placeholder="Sila Masukkan Kawasan Rumah Yang Ingin Dicari " name="search_value" required>
-<!--     <input type="text" id="search" placeholder="Sila Masukkan kawasan rumah yang ingin dicari " required name="search_value">
- -->    <!--<input type="submit" value="Cari" id="submit" name="SEARCH">-->
-		<!--  <input type="submit" name="SEARCH" value="Search" id="submit"/>-->
-          <input type="submit" name="search" value="CARI" id="submit"/>
+            <input type="text" id="search" placeholder="Tajuk Iklan " name="search_value" required>
+            <input type="submit" name="search" value="CARI" id="submit"/>
+            <select name="kawasan_id">
+            <option value="">--Sila Pilih Lokasi--</option>
+							<?php
+							
+							$sql_pentadbir1 = "SELECT * FROM kawasan";
+							$result_pentadbir1 = $mysqli_db->query($sql_pentadbir1)or die(mysql_error());
+							while($rows_pentadbir1 = $result_pentadbir1->fetch_array())
+							{
+
+							?>
+							<option value="<?php echo $rows_pentadbir1['kawasan_id'];?>">
+								<?php echo $rows_pentadbir1['kawasan_name'];?>
+							</option>
+							<?php
+							}
+
+							?>
+							</select>
+          	
   </form>
   
 
+            </p>
+
+            <p>
+            Hasil Carian : <?php echo @$query_result->num_rows;?>
             </p>
 			<table cellspacing="5" cellpadding="5" class="table table-striped table-bordered table-condensed">
 
@@ -190,7 +194,13 @@ while ($rows = @$query_result->fetch_assoc())
 		  </span>
 		  <div class="span5">
 			  <span class="badge badge-important">Price :</span> <strong>RM <?php echo $rows['price_rent'];?></strong> 
-			  <span class="badge badge-important">Location :</span> <?php echo $rows['location'];?>
+			  <span class="badge badge-important">Location :</span> 
+			  <?php 
+
+        $sql_pentadbir = "SELECT * FROM kawasan WHERE kawasan_id = '".$rows['kawasan_id']."'";
+        $result_pentadbir = $mysqli_db->query($sql_pentadbir);
+        $rows_pentadbir = $result_pentadbir->fetch_array();  
+        echo $rows_pentadbir['kawasan_name'];?>
 			  <div class="well">
 	  				<?php echo $rows['descr'];?>
 			  </div>

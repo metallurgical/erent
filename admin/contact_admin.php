@@ -87,7 +87,7 @@ if(isset($_POST['simpan']))
         <div class="span9">
 		  <div class="row-fluid">
 			<div class="page-header">
-				<h1>Pertanyaan/Maklum Balas <small></small></h1>
+				<h1>Aduan Kerosakan <small></small></h1>
 			</div>
 			<form class="form-horizontal" action="contact_admin.php" method="post">
 				<fieldset>
@@ -97,12 +97,12 @@ if(isset($_POST['simpan']))
 							<input type="text" class="input-xlarge" id="role" name="name"/>
 						</div>
 					</div>
-                    <div class="control-group">
+                    <!-- <div class="control-group">
 						<label class="control-label" for="slug">Email</label>
 						<div class="controls">
 							<input type="text" class="input-xlarge" id="slug" name="email"/>
 						</div>
-					</div>
+					</div> -->
                     
 					
                        <div class="control-group">
