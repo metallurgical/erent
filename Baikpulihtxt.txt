@@ -1,7 +1,7 @@
-1)tukar nama database ihome kpd erent
+1)tukar nama database ihome kpd erent - lpas ni
 
 2)Admin 
--dekat pengurusan pengguna,del status
+-dekat pengurusan pengguna,del status - dah
 -pendaftaran admin baru tu pun del
 -menu laporan tu delete
 -pengurusan maklum balas del
