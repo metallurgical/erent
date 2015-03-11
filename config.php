@@ -2,7 +2,7 @@
 $host = "localhost";
 $username = "root";
 $password = "";
-$db_name = "ihome";
+$db_name = "erent";
 
 $connect = new mysqli($host, $username, $password, $db_name);
 if($connect->connect_errno)

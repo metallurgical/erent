@@ -5,7 +5,7 @@ extract($_REQUEST);
 if($jenis=="lulus")
 {
 	$sta = 1;
-	$sta = 2;
+	
 	$effectiveDate = date('Y-m-d');
 	$effectiveDate = date('Y-m-d', strtotime("+5 months", strtotime($effectiveDate)));
 	$not = 'Tiada Notis';

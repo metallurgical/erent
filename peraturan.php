@@ -123,14 +123,19 @@ body {
 	<div class="header_text">
 		<div class="container_12">
 			<div class="grid_9">
-				<h1>Laman Web Untuk Carian Rumah Sewa.</h1>
-            <p>Erent merupakan sebuah portal yang menyediakan perkhidmatan pengiklanan rumah sewa yang lengkap dengan sistem pencarian bagi memudahkan pengunjung untuk mencari rumah sewa yang berhampiran dengan mereka. Ini kerana kami dapati kesukaran dan kesulitan pengguna untuk mencari rumah sewa kerana tiadanya directory khusus yang lengkap untuk sistem pencarian rumah sewa ini kerana pemilik sendiri tiada tempat yang khusus untuk meletakkan iklan rumah sewa mereka.Masalah mencari rumah sewa memang telah di ketahui umum. Kadang-kala bukan kerana tiada rumah untuk disewa, tetapi tidak sampainya maklumat tersebut kepada kita. Kebiasaannya, maklumat sebegini sampai semasa kita tidak memerlukannya. Masa nak cari, susah sangat nak jumpa. Bila sudah dapat, macam-macam pula yang kita nampak.</p>
-                
-                   <li>
-		    	<a href="login.php" class="sc_button large blue"><span class="users_icons32 icon32_1"></span><span class="icon_divider"></span><span class="button_text">Log Masuk</span></a>
-                <a href="form.php" class="sc_button large orange"><span class="button_text">Daftar</span><span class="icon_divider"></span><span class="users_icons32 icon32_4"></span></a>
-		    	
-		    </li>
+				<h1>Peraturan & Syarat.</h1>
+            <p>Bagi Pemilik.</p>
+             <ul>   
+            	<li>Setiap iklan akan dikenakan bayaran sebelum iklan dipamerkan.</li>
+            	<li>Iklan akan diberhentikan sekiranya bayaran iklan tidak dilunaskan selepas sebulan tarikh notis dikeluarkan.</li>
+            	<li>Iklan akan diluluskan selepas pemantauan dibuat.</li>            	
+		    </ul>
+		    <p>Bagi Penyewa.</p>
+             <ul>   
+            	<li>Iklan boleh didapati di menu carian.</li>
+            	<li>Sebarang pertanyaan mengenai iklan, anda boleh berhubung dengan pemilik(melalui no. telefon). Pihak pentadbir tiada kena mengena dengan iklan pemilik.</li>
+            	<li>Sebarang aduan mengenai iklan, anda boleh berhubung dengan pemilik menggunakan mana-mana alat komunikasi yang sesuai.</li>           	
+		    </ul>
 			</div>
 			<div class="grid_3 align_right"></div>
 		</div>
@@ -140,13 +145,7 @@ body {
 	<div class="container_12">
 		<!-- features boxes -->
 	  <div class="grid_12">
-		<!--	<div class="divider_page"><h2>Carian Sewa</h2></div>
-        <h5></h5>
-    <form class="form-wrapper" action="carian.php">
-    <input type="text" id="search" placeholder="Sila Masukkan kawasan rumah yang ingin dicari ." required>
-    <input type="submit" value="Cari" id="submit">
-</form>
-</div>-->
+		
 	  </div>
 		<!-- features boxes end -->
 		
@@ -158,54 +157,10 @@ body {
 		<div class="container_12">
         
 		<br>
-        <div class="grid_10">
-			<div class="divider_page"><h2>Kenapa pilih Erent?</h2></div>
-			<ul class="star">
-				<li>Membantu Anda Mendapatkan Lebih Banyak Penyenaraian.</li>
-				<li>Pengiklanan Yang Terbaik.</li>
-				<li>Mesra Pengguna.</li>
-				<li>Pencarian Yang Lebih Sistematik.</li>
-			</ul>
-         
-		</div>
+        
         <div class="clearfix"></div>
         	<!-- blockquotes, testimonial and info box examples -->
-		<div class="grid_12">
-			<!-- blockquote example -->
-			<div class="grid_4 alpha">
-				<div class="divider_page"><h2>Matlamat!!</h2></div>
-				<!-- blockquote -->
-				<div class="blockquote">
-				  <p>Kepuasan Pengguna Adalah Keutamaan Kami</p>
-				</div>
-				<!-- blockquote end -->
-			</div>
-			<!-- blockquote example end -->
-			<!-- testimonials example -->
-			<div class="grid_4 lambda">
-				<div class="divider_page"><h2> Perhatian!!</h2></div>
-				<div class="testimonial">
-					<div class="desc">Jika anda merupakan pemilik rumah atau broker yang sedang mencari penyewa untuk rumah atau properties anda, maka di sinilah tempat yang paling sesuai untuk meletakkan iklan rumah sewa anda.
-
-Kenapa?? Kerana ini merupakan portal web directory iklan rumah sewa yang paling sesuai untuk anda</div>
-					<div class="who">
-						<img src="assets/images/mix/envato/envato_logo.png" alt=""/> <span class="name"></span><span class="job"></span>
-					</div>
-				</div>
-			</div>
-			<!-- testimonials example end -->
-			<!-- info box example -->
-			<div class="grid_4 omega">
-				<div class="divider_page"><h2>Perhatian !!</h2></div>
-				<div class="infobox">
-					<p>Rumah Sewa Di Bandar Dungun Utk Disewa. Siapa cepat dia dapat .Sewa : RM 450.00 / sebulan!! 
-Ruang Perjalanan : 650.00 m² 
-Kemudahan : Berhampiran Supermarket, Berhampiran Pusat Jagaan kanak-kanak, Berhampiran Pusat Bandar, Berhampiran Masjid/Surau. </p>
-				<!--	<a href="#" class="sc_button medium">Test</a> -->
-				</div>
-			</div>
-			<!-- info box example end -->
-		</div>
+		
 		<!-- blockquotes, testimonial and info box examples end -->
 		<hr class="grid_12">
 			<!-- popular blog post end -->

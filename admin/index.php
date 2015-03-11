@@ -12,7 +12,7 @@ if($_GET['action']=="logout")
 {
 	unset($_SESSION['user_id']);
 	session_destroy();
-	echo "<script language=javascript>alert('Log keluar berjaya.');window.location='../login.php';</script>";
+	echo "<script language=javascript>alert('Log keluar berjaya.');window.location='../index.php';</script>";
 }
 
 
