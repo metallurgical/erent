@@ -89,6 +89,7 @@ if($result_pelajar = $connect->query($sql_pelajar))
 						<th>Harga</th>
             <th>Sah sehingga</th>
             <th>Status</th>
+            <th width="200">Notis</th>
             <th>Proses</th>
 					</tr>
 				</thead>
@@ -133,8 +134,15 @@ if($result_pelajar = $connect->query($sql_pelajar))
                                  
                                   </td>
                                   <td class="numeric">
+                                  <?php 
+                                  
+                                    echo $rows_pelajar['notis']."<br/>";
+                                  
+                                  ?></td>
+                                  <td class="numeric">
                                     <a href="admin_status_rumah.php?id=<?php echo $rows_pelajar['id'];?>&jenis=lulus">Lulus</a><br/>
                                     <a href="admin_status_rumah.php?id=<?php echo $rows_pelajar['id'];?>&jenis=diberhentikan">Diberhentikan</a>
+                                    <a href="admin_status_rumah.php?id=<?php echo $rows_pelajar['id'];?>&jenis=notis">Notis</a>
                                   </td>
                            
                              <?php } while($rows_pelajar = $result_pelajar->fetch_array()); } ?>

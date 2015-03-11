@@ -4,10 +4,11 @@
               <!-- <li class="active"><a href="index.php">Admin</a></li> -->
               <li><a href="user.php">Pengurusan Pengguna</a></li>
               <li><a href="home.php">Pengurusan Rumah Sewa</a></li>
-              <li><a href="list_contact.php">Pengurusan Pertanyaan</a></li>
-              <li><a href="newuser.php">Pentadbir Baru</a></li>
-              <li><a href="edit_delete_user.php">Pengurusan Pentadbir Baru</a></li>              
-               <li><a href="">Laporan</a></li>
+              <!-- <li><a href="admin_notis.php">Hantar Notis</a></li> -->
+              <!-- <li><a href="list_contact.php">Pengurusan Pertanyaan</a></li> -->
+              <!-- <li><a href="newuser.php">Pentadbir Baru</a></li>
+              <li><a href="edit_delete_user.php">Pengurusan Pentadbir Baru</a></li> -->              
+               <!-- <li><a href="">Laporan</a></li> -->
                <li class="nav-header"><i class="icon-home"></i> Penyewa</li>
               <li class="active"><a href="index.php">Penyewa</a></li>
               <li><a href="search.php">Carian Rumah</a></li> 
@@ -19,7 +20,7 @@
              
               <li><a href="home_reg.php">Daftar Rumah</a></li>
               <li><a href="pemilik_rumah_admin.php">Senarai Rumah</a></li>
-               <li><a href="contact_admin.php">Pertanyaan/Maklum Balas </a></li>    
+               <!-- <li><a href="contact_admin.php">Pertanyaan/Maklum Balas </a></li>   -->  
            <?php  } ?>    
       <?php if ($_SESSION['role']=='staff') { ?>    
               <li class="nav-header"><i class="icon-wrench"></i> Admin</li>
