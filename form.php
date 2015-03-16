@@ -97,13 +97,13 @@ if(isset($_POST['simpan']))
             <div class="row">
            
                 <div class="col-lg-12">
-                  <img src="assets/images/E-Rent.png" alt="logo" height="49" width="150"/>
+                  <!-- <img src="assets/images/E-Rent.png" alt="logo" height="49" width="150"/> -->
                   <h1 class="page-header">Daftar Pengguna</h1>
               </div>
                 <!-- /.col-lg-12 -->
             </div>
             <!-- /.row -->
-            <div class="row">
+            <div class="row"> 
                 <div class="col-lg-12">
                     <div class="panel panel-default">
                         <div class="panel-heading">
@@ -166,22 +166,20 @@ if(isset($_POST['simpan']))
                                           <div class="form-group">
                                             <label>Negeri</label><br>
                                             <?php
-											error_reporting(0);
-mysql_connect("localhost","root","");
-mysql_select_db("erent");
+											
 
-//query
-$sql=mysql_query("SELECT id,nama FROM negeri");
-if(mysql_num_rows($sql)){
-$select= '<select name="negeri">';
-while($rs=mysql_fetch_array($sql)){
-      $select.='<option value="'.$rs['id'].'">'.$rs['nama'].'</option>';
-  }
-}
-$select.='</select>';
-echo $select;
+                                            //query
+                                            $sql=mysql_query("SELECT id,nama FROM negeri");
+                                            if(mysql_num_rows($sql)){
+                                            $select= '<select name="negeri">';
+                                            while($rs=mysql_fetch_array($sql)){
+                                                  $select.='<option value="'.$rs['nama'].'">'.$rs['nama'].'</option>';
+                                              }
+                                            }
+                                            $select.='</select>';
+                                            echo $select;
 
-?>
+                                            ?>
                                            
                                         </div>
                                             
