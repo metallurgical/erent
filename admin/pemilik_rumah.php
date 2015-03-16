@@ -88,6 +88,7 @@ if($result_pelajar = $connect->query($sql_pelajar))
 						<th>Lokasi</th>
 						<th>Harga</th>
             <th>Iklan sah sehingga</th>
+            <th width="200">Notis</th>
             <th>Status</th>
 					</tr>
 				</thead>
@@ -112,6 +113,19 @@ if($result_pelajar = $connect->query($sql_pelajar))
                                   {
                                     echo '<font color="red">Iklan diberhentikan, sila jelaskan bayaran</font>';
                                   }
+                                  ?></td>
+                                  <td class="numeric">
+                                  <?php 
+                                  if(!$rows_pelajar['notis']=="")
+                                  {
+
+                                    echo $rows_pelajar['notis']."<br/>";
+                                  }
+                                  else
+                                  {
+                                    echo "Tiada Notis";
+                                  }
+                                  
                                   ?></td>
                                   <td class="numeric">
                                   <?php 
