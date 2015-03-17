@@ -167,8 +167,9 @@ if(isset($_POST['simpan']))
                                             <label>Negeri</label><br>
                                             <?php
 											
-
-                                            //query
+                                            mysql_connect("localhost", "root", "");
+                                            mysql_select_db('erent');
+                                            
                                             $sql=mysql_query("SELECT id,nama FROM negeri");
                                             if(mysql_num_rows($sql)){
                                             $select= '<select name="negeri">';
