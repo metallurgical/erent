@@ -52,11 +52,11 @@ if(isset($_POST['simpan']))
 				$sql_edit_pelajar = "UPDATE user SET nama = '".$name_edit."', email = '".$email_edit."', no_tel = '".$no_tel_edit1."', alamat = '".$alamat_edit1."', daerah = '".$daerah_edit1."', poskod = '".$poskod_edit1."', negeri = '".$negeri_edit."', username = '".$username_edit."', password = '".$password_edit."' WHERE user_id = '".$_GET['id']."'";
 				if($result_edit_pelajar = $connect->query($sql_edit_pelajar))
 				{
-					echo "<script language=javascript>alert('Maklumat pelajar berjaya dikemaskini.');window.location='my-profile.php?id=".$_GET['id']."';</script>";
+					echo "<script language=javascript>alert('Maklumat telah berjaya dikemaskini.');window.location='my-profile.php?id=".$_GET['id']."';</script>";
 				}
 				else
 				{
-					echo "<script language=javascript>alert('Maklumat pelajar tidak berjaya dikemaskini. Sila cuba lagi.');window.location='my-profile.php?id=".$_GET['id']."';</script>";
+					echo "<script language=javascript>alert('Maklumat  tidak berjaya dikemaskini. Sila cuba lagi.');window.location='my-profile.php?id=".$_GET['id']."';</script>";
 				}
 			}
 		}

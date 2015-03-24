@@ -26,14 +26,16 @@ $mysqli_db = new mysqli('localhost', 'root', '', 'erent');
 
 // normal search
 $result_tb = "";
-if(isset($_POST['search']) && !empty($_POST['search_value'])) {
-
-   $e = $_POST['search_value'];
+if(isset($_POST['search'])) {
+  echo "<script language=javascript>alert('Sebarang penempahan rumah, anda boleh menghubungi pemilik menggunakan nombor yang tertera di senarai rumah.');</script>";
+   //$e = $_POST['search_value'];
    $kawasan_id = $_POST['kawasan_id'];
 
-  $query = 'SELECT * FROM home WHERE status=1 and ' ."tajuk LIKE '%$e%' and kawasan_id = '$kawasan_id'";
-   $query_result = $mysqli_db->query($query);
-   echo "<script language=javascript>alert('Sebarang penempahan rumah, anda boleh menghubungi pemilik menggunakan nombor yang tertera di senarai rumah.');</script>";
+  //$query = 'SELECT * FROM home WHERE status=1 and ' ."tajuk LIKE '%$e%' and kawasan_id = '$kawasan_id'";
+   $query = "SELECT * FROM home WHERE status=1 and kawasan_id = $kawasan_id";
+  $query_result = $mysqli_db->query($query);
+   
+
 
    
 }
@@ -165,7 +167,7 @@ body {
 				<h1>Carian Rumah <small></small></h1>
 			</div>
               <form class="form-wrapper" method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>">
-            <input type="text" id="search" placeholder="Tajuk Iklan " name="search_value" required>
+            <!-- <input type="text" id="search" placeholder="Tajuk Iklan " name="search_value" required> -->
             <input type="submit" name="search" value="CARI" id="submit"/>
             <select name="kawasan_id">
             <option value="">--Sila Pilih Lokasi--</option>

@@ -2,12 +2,13 @@
 $mysqli_db = new mysqli('localhost', 'root', '', 'erent');
 
 $result_tb = "";
-if(isset($_POST['search']) && !empty($_POST['search_value'])) {
+if(isset($_POST['search'])) {
 	echo "<script language=javascript>alert('Sebarang penempahan rumah, anda boleh menghubungi pemilik menggunakan nombor yang tertera di senarai rumah.');</script>";
-   $e = $_POST['search_value'];
+   //$e = $_POST['search_value'];
    $kawasan_id = $_POST['kawasan_id'];
 
-  $query = 'SELECT * FROM home WHERE status=1 and ' ."tajuk LIKE '%$e%' and kawasan_id = '$kawasan_id'";
+  //$query = 'SELECT * FROM home WHERE status=1 and ' ."tajuk LIKE '%$e%' and kawasan_id = '$kawasan_id'";
+   $query = "SELECT * FROM home WHERE status=1 and kawasan_id = $kawasan_id";
   $query_result = $mysqli_db->query($query);
    
 
@@ -121,7 +122,7 @@ if(isset($_POST['search']) && !empty($_POST['search_value'])) {
 	<!-- menu -->
 	<div id="header">
 		<!-- logo -->
-		<div id="logo"><a href="index.php"><img src="assets/images/E-Rent.png" alt="logo" height="30" width="150"/></a></div>
+		<div id="logo" style="height:30px"><!-- <a href="index.php"><img src="assets/images/E-Rent.png" alt="logo" height="30" width="150"/></a> --></div>
 		<!-- logo end -->
 		<!-- main menu -->
 			<ul id="mainmenu">
@@ -149,7 +150,7 @@ if(isset($_POST['search']) && !empty($_POST['search_value'])) {
 			<p>
             
             <form class="form-wrapper" method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>">
-            <input type="text" id="search" placeholder="Tajuk Iklan " name="search_value" required>
+            <!-- <input type="text" id="search" placeholder="Tajuk Iklan " name="search_value" required> -->
             <input type="submit" name="search" value="CARI" id="submit"/>
             <select name="kawasan_id">
             <option value="">--Sila Pilih Lokasi--</option>

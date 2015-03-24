@@ -23,7 +23,7 @@ if($result_pentadbir = $connect->query($sql_pentadbir))
 
 if(isset($_POST['simpan']))
 {
-$con=mysqli_connect("localhost","root","","ihome");
+$con=mysqli_connect("localhost","root","","erent");
 		// Check connection
 		if (mysqli_connect_errno())
 		  {
@@ -47,7 +47,7 @@ $con=mysqli_connect("localhost","root","","ihome");
 		$desc = mysqli_real_escape_string($con, $_POST['desc']);
 		$nama_user = mysqli_real_escape_string($con, $_POST['nama_user']);
 		$user_id = mysqli_real_escape_string($con, $_POST['user_id']);
-		$tajuk = mysqli_real_escape_string($con, $_POST['tajuk']);
+		/*$tajuk = mysqli_real_escape_string($con, $_POST['tajuk']);*/
 
 		$file=$_FILES["file"]["name"];
 		$size= $_FILES["file"]["size"];
@@ -76,17 +76,17 @@ $con=mysqli_connect("localhost","root","","ihome");
 				if (file_exists("upload/" . $_FILES["file"]["name"])) 
 				{
 				// echo $_FILES["file"]["name"] . "Image upload already exist. ";
-			 echo $_FILES["file"]["name"] ."<script language=javascript>alert('Image upload already exist.');</script>";
+			 		echo $_FILES["file"]["name"] ."<script language=javascript>alert('Image upload already exist.');</script>";
     			} 
 				else
 				{
 
 				  move_uploaded_file($_FILES["file"]["tmp_name"],
 				  "upload/" . $_FILES["file"]["name"]);
-				  mysqli_query($con,"INSERT INTO home (tajuk,user_id,gambar_rumah,nama_pemilik,alamat,poskod,no_tel,email,kawasan_id,type_properties,bedroom,  bath_room,furnished,price_rent,descr,created_by,created_dt,status_bayaran)
-					VALUES ('$tajuk','$user_id','$file','$nama_pemilik','$alamat','$poskod','$no_tel','$email3','$kawasan_id','$jenis','$bil_bed','$bil_bath','$furnished','$harga','$desc','$nama_user',now(),'belum_jelas')")or die(mysql_error());
+				  mysqli_query($con,"INSERT INTO home (user_id,gambar_rumah,nama_pemilik,alamat,poskod,no_tel,email,kawasan_id,type_properties,bedroom,  bath_room,furnished,price_rent,descr,created_by,created_dt,status_bayaran)
+					VALUES ('$user_id','$file','$nama_pemilik','$alamat','$poskod','$no_tel','$email3','$kawasan_id','$jenis','$bil_bed','$bil_bath','$furnished','$harga','$desc','$nama_user',now(),'belum_jelas')")or die(mysql_error());
 				//echo "Data Entered Successfully Saved!";
-				echo "<script language=javascript>alert('Data Berjaya Disimpan');</script>";
+				   echo "<script language=javascript>alert('Data Berjaya Disimpan');</script>";
     			}
 
 		//}
@@ -183,12 +183,12 @@ $con=mysqli_connect("localhost","root","","ihome");
 							<input type="text" class="input-xlarge" id="city" name="email" required value="<?php echo ucwords($rows_pentadbir['email']);?>" readonly />
 						</div>
 					</div>
-					<div class="control-group">
+					<!-- <div class="control-group">
 						<label class="control-label" for="city">Tajuk Iklan</label>
 						<div class="controls">
 							<input type="text" class="input-xlarge" id="city" name="tajuk" required />
 						</div>
-					</div>	
+					</div> -->	
                     <!-- <div class="control-group">
 						<label class="control-label" for="city">Lokasi</label>
 						<div class="controls">

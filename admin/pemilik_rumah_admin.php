@@ -85,7 +85,7 @@ if($result_pelajar = $connect->query($sql_pelajar))
 						<th>ID</th>
 						<th>Alamat</th>
 						<th>No.Telefon</th>
-						<th>Lokasi</th>
+						<!-- <th>Lokasi</th> -->
 						<th>Harga</th>
             <th>Sah sehingga</th>
             <th>Status</th>
@@ -98,7 +98,7 @@ if($result_pelajar = $connect->query($sql_pelajar))
                                   <td><?php echo ++$num;?></td>
                                   <td> <?php echo ucwords($rows_pelajar['alamat']);?></td>
                                   <td class="numeric"><?php echo ucwords($rows_pelajar['no_tel']);?></td>
-                                  <td class="numeric"><?php echo ucwords($rows_pelajar['location']);?></td>
+                                  <!-- <td class="numeric"><?php echo ucwords($rows_pelajar['location']);?></td> -->
                                   <td class="numeric"><?php echo ucwords($rows_pelajar['price_rent']);?></td>
                                   <td class="numeric">
                                     <?php 
@@ -135,8 +135,15 @@ if($result_pelajar = $connect->query($sql_pelajar))
                                   </td>
                                   <td class="numeric">
                                   <?php 
-                                  
+                                  if(!$rows_pelajar['notis']=="")
+                                  {
+
                                     echo $rows_pelajar['notis']."<br/>";
+                                  }
+                                  else
+                                  {
+                                    echo "Tiada Notis";
+                                  }
                                   
                                   ?></td>
                                   <td class="numeric">

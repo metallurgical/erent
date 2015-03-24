@@ -1,0 +1,25 @@
+Salam..
+1) Admin
+-pengurusan rumah sewa tu delete column "lokasi" 
+(sebab xberkait dah kan) - dah
+- pengurusan rumah sewa lagi
+bila tekan icon kemaskini,kluar page yg lama.
+tukar page baru yg sama dgn pemilik nk daftar 
+rumah. - dah
+
+Bahagian search
+-buang tajuk iklan,just terus kpd lokasi - dah
+
+
+
+
+Kat bhgian admin ni dekat pndaftran umah sewa ni ubh jgk la bia jd cam page pndftaran umah sewa kat pmilik..page tu bia samo..sbb ni hop lamo..mnx tlg cek - dah
+
+
+Dekat bhgian admin bg notis kat pemilik..xkuar notis tu..bkpo ea? Bila tekan berhenti bru tubik notis tu -  dah
+
+Sbb igt nk bg peringatan la kalau tarikh cnthnya mgu dpn nk abis..kena bg pringatan awal - dah
+
+Table feedback tu xperlu dah kan
+
+Dekat bhgian pengurusan umah sewa kat admin ni..role utk lokasi ni xbguna dah kn? So del je laa - dah

@@ -103,7 +103,7 @@ body {
 	<!-- menu -->
 	<div id="header">
 		<!-- logo -->
-		<div id="logo"><a href="index.php"><img src="assets/images/E-Rent.png" alt="logo" height="30" width="150"/></a></div>
+		<div id="logo" style="height:30px"><!-- <a href="index.php"><img src="assets/images/E-Rent.png" alt="logo" height="30" width="150"/></a> --></div>
 		<!-- logo end -->
 		<!-- main menu -->
 		<ul id="mainmenu">
